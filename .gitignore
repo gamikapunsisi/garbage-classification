@@ -2,3 +2,4 @@ data/raw/garbage-classification.zip
 data/processed/
 data/raw/
 # Ignore dataset
+data/raw/garbage-classification.zip
