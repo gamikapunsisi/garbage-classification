@@ -1,5 +1,55 @@
 data/raw/garbage-classification.zip
-data/processed/
-data/raw/
+
 # Ignore dataset
 data/raw/garbage-classification.zip
+
+
+# ====================
+# Python / Flask
+# ====================
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+ENV/
+*.sqlite3
+*.log
+uploads/
+
+# PyTorch model files
+*.pth
+*.pt
+
+# ====================
+# Data files
+# ====================
+data/raw/
+data/processed/
+# Ignore raw datasets (zipped or extracted)
+*.zip
+*.tar
+*.tar.gz
+*.csv
+*.json
+*.h5
+*.npz
+
+# ====================
+# React / Node / Vite
+# ====================
+node_modules/
+dist/
+*.env
+*.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ====================
+# Editor / OS
+# ====================
+.vscode/
+.idea/
+*.swp
+.DS_Store
