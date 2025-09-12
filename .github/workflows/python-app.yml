@@ -51,5 +51,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./             # root of your repo
-          server-dir: /public_html/garbageclassificationbackend.insaash.space/  # cPanel folder
           dry-run: false
