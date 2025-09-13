@@ -20,9 +20,9 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 # Serve frontend page
-@app.route('/')
-def index():
-    return render_template('https://garbageclassification.insaash.space/')
+# @app.route('/')
+# def index():
+#     return render_template('https://garbageclassification.insaash.space/')
 
 # Prediction API
 @app.route('/predict', methods=['POST'])
