@@ -6,7 +6,16 @@ from werkzeug.utils import secure_filename
 
 # Initialize Flask
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
+
+CORS(
+    app,
+    origins=["https://garbageclassification.insaash.space"],  # allow only your frontend
+    supports_credentials=True,
+    allow_headers=["Content-Type", "Authorization"],
+    methods=["GET", "POST", "OPTIONS"]
+)
+
 
 UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
@@ -51,4 +60,4 @@ def predict():
     return jsonify({'error': 'File type not allowed'}), 400
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(host="0.0.0.0", port=5000, debug=True)
