@@ -8,15 +8,7 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 CORS(app)
 
-CORS(app, origins="https://garbageclassification.insaash.space")
 
-# CORS(
-#     app,
-#     origins=["https://garbageclassification.insaash.space"],  # allow only your frontend
-#     supports_credentials=True,
-#     allow_headers=["Content-Type", "Authorization"],
-#     methods=["GET", "POST", "OPTIONS"]
-# )
 
 
 UPLOAD_FOLDER = "uploads"
