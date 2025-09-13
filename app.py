@@ -6,11 +6,7 @@ from werkzeug.utils import secure_filename
 
 # Initialize Flask
 app = Flask(__name__)
-# CORS(app, origins=["https://garbageclassification.insaash.space"])
-
-CORS(app, resources={r"/predict": {"origins": "https://garbageclassification.insaash.space"}})
-
-# CORS(app, resources={r"/*": {"origins": "https://garbageclassification.insaash.space"}})
+CORS(app)
 
 
 UPLOAD_FOLDER = "uploads"
@@ -26,8 +22,7 @@ def allowed_file(filename):
 # Serve frontend page
 @app.route('/')
 def index():
-    return jsonify({"status": "Backend running", "message": "Use /predict endpoint with POST"})
-
+    return render_template('https://garbageclassification.insaash.space/')
 
 # Prediction API
 @app.route('/predict', methods=['POST'])
