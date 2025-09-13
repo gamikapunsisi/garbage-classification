@@ -6,7 +6,7 @@ from werkzeug.utils import secure_filename
 
 # Initialize Flask
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://garbageclassification.insaash.space"])
 
 
 
