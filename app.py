@@ -24,7 +24,8 @@ def allowed_file(filename):
 # Serve frontend page
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return jsonify({"status": "Backend running", "message": "Use /predict endpoint with POST"})
+
 
 # Prediction API
 @app.route('/predict', methods=['POST'])
