@@ -6,9 +6,11 @@ from werkzeug.utils import secure_filename
 
 # Initialize Flask
 app = Flask(__name__)
-CORS(app, origins=["https://garbageclassification.insaash.space"])
+# CORS(app, origins=["https://garbageclassification.insaash.space"])
 
+CORS(app, resources={r"/predict": {"origins": "https://garbageclassification.insaash.space"}})
 
+# CORS(app, resources={r"/*": {"origins": "https://garbageclassification.insaash.space"}})
 
 
 UPLOAD_FOLDER = "uploads"
